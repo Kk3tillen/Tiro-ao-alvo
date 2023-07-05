@@ -1,0 +1,13 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+#game{
+    width: 70vw;
+    height: 70vh;
+    background-image: url("https://static.vecteezy.com/ti/vetor-gratis/p3/3478848-natureza-floresta-paisagem-fundo-gratis-vetor.jpg");
+    background-size: cover;
+    background-position: center;
+}
