@@ -1,8 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100;200;300;400;600&display=swap');
 * {
     margin: 0;
     padding: 0;
     border: 0;
     box-sizing: border-box;
+}
+body{
+    display: grid;
+    color: #0F0925;
+    font-family: 'Lexend', sans-serif;
 }
 #game{
     width: 70vw;
@@ -10,4 +16,60 @@
     background-image: url("https://static.vecteezy.com/ti/vetor-gratis/p3/3478848-natureza-floresta-paisagem-fundo-gratis-vetor.jpg");
     background-size: cover;
     background-position: center;
+    border-radius: 0.625rem;
+    cursor: Crosshair;
 }
+main{
+    display: grid;
+    place-content: center;
+}
+#pontuacao{
+    display: flex;
+    gap: 25px;
+    justify-content: center;
+    text-align: center;
+    padding: 25px;
+}
+#acerto, #erros, #total{
+    padding: 20px;
+    width: 11rem;
+    border-radius: 0.625rem;
+    border: 1px solid #C2C2C2;
+    background: #F6F6F6; 
+    display: grid;
+    justify-content: center;
+}
+h1{
+   padding: 25px;
+   text-align: center;
+}
+h3{
+    font-weight:bold;
+}
+#rodape{
+    background: #0F0925;
+    width: 100%;
+    color: aliceblue;
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    text-align: center;
+    padding: 2.5rem;
+    align-items:end;
+}
+#text_reservado{
+    color: #63598a;
+    text-align: justify;
+}
+#rodape > p{
+    font-weight: 200;
+}
+#rodape > h4{
+    font-weight: bolder;
+}
+.movable-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: top 0.3s ease, left 0.3s ease; /* adicione transições suaves */
+  }
