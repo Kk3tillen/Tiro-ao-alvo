@@ -13,11 +13,13 @@ body{
 #game{
     width: 70vw;
     height: 70vh;
-    background-image: url("https://static.vecteezy.com/ti/vetor-gratis/p3/3478848-natureza-floresta-paisagem-fundo-gratis-vetor.jpg");
+    background-image: url("../imgs/fundo1.png");
     background-size: cover;
     background-position: center;
     border-radius: 0.625rem;
     cursor: Crosshair;
+    position: relative;
+    overflow: hidden;
 }
 main{
     display: grid;
@@ -69,7 +71,4 @@ h3{
 }
 .movable-image {
     position: absolute;
-    top: 0;
-    left: 0;
-    transition: top 0.3s ease, left 0.3s ease; /* adicione transições suaves */
-  }
+}
