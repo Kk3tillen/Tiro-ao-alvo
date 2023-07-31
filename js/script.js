@@ -1,4 +1,6 @@
-let meuComponente = document.getElementById("meuComponente");
+let gameDiv = document.getElementById("game");
+let raposoImg = document.querySelector("#game .movable-image");
+
 let acertou = document.getElementById("acertou");
 let errou = document.getElementById("errou");
 let todo = document.getElementById("todo");
@@ -6,26 +8,20 @@ let todo = document.getElementById("todo");
 let valor1 = parseInt(acertou.textContent);
 let valor2 = parseInt(errou.textContent); 
 
-let minhaImagem = meuComponente.querySelector("img");
-let container = document.getElementById("game");
-meuComponente.addEventListener("click", moverComponente);
+raposoImg.addEventListener("click", function() {
+  // Gera coordenadas aleatórias dentro dos limites da div "game"
+  let limiteX = gameDiv.clientWidth - raposoImg.clientWidth;
+  let limiteY = gameDiv.clientHeight - raposoImg.clientHeight;
+  let novaPosicaoX = Math.floor(Math.random() * limiteX);
+  let novaPosicaoY = Math.floor(Math.random() * limiteY);
 
-function moverComponente() {
-    let containerWidth = container.clientWidth;
-    let containerHeight = container.clientHeight;
-    
-    let novoLeft = Math.random() * (containerWidth - meuComponente.offsetWidth);
-    let novoTop = Math.random() * (containerHeight - meuComponente.offsetHeight);
+  // Define a posição da imagem usando as propriedades left e top
+  raposoImg.style.left = novaPosicaoX + "px";
+  raposoImg.style.top = novaPosicaoY + "px";
 
-    meuComponente.style.left = novoLeft + "px";
-    meuComponente.style.top = novoTop + "px";
+  acertou.innerHTML = valor1++;
+});
 
-    acertou.innerHTML = valor1++;
-}
 document.getElementById("game").onclick=function(){
-   errou.innerHTML = valor2++; 
-}
-
-
-
-
+    errou.innerHTML = valor2++; 
+ }
