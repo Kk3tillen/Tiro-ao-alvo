@@ -25,7 +25,6 @@ raposoImg.addEventListener("click", function() {
   raposoImg.style.left = novaPosicaoX + "px";
   raposoImg.style.top = novaPosicaoY + "px";
 
-  acertou.innerHTML = valor1++;
 });
 
 document.getElementById("game").onclick=function(){
@@ -39,7 +38,7 @@ target.addEventListener("click", (e) => {
     clearInterval(moverComponenteAutomatico);
     moverComponente();
     moverComponenteAutomatico = setInterval(moverComponente, MOVER_COMPONENTE_AUTOMATICO_APOS_SECS)
-    todo.innerHTML = valor1 - valor2;
+    todo.innerHTML = valor1 + valor2;
 });
 
 function moverComponente() {
@@ -59,5 +58,5 @@ function moverComponente() {
 moverComponenteAutomatico = setInterval(moverComponente, MOVER_COMPONENTE_AUTOMATICO_APOS_SECS);
 document.getElementById("game").onclick=function(){
    errou.innerHTML = ++valor2; 
-   todo.innerHTML = valor1 - valor2;
+   todo.innerHTML = valor1 + valor2;
 }
