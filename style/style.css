@@ -127,7 +127,8 @@ h3{
         justify-content: center;
         font-size: 10px;
     }
-    .game-container:hover {
-        cursor: url(../imgs/crosshair.svg),auto;
-    }
+
+}
+.game-container:hover {
+    cursor: url(../imgs/crosshair.svg),auto;
 }
