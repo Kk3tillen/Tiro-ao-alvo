@@ -45,8 +45,8 @@ function moverComponente() {
     const offset = 50;
     let containerWidth = container.clientWidth;
     let containerHeight = container.clientHeight;
-    let novoLeft = Math.floor(Math.random()*containerWidth-offset);
-    let novoTop = Math.floor(Math.random()*containerHeight-offset);
+    let novoLeft = Math.floor(Math.random()*(containerWidth-target.clientWidth));
+    let novoTop = Math.floor(Math.random()*(containerHeight-target.clientHeight));
     
     const flip = Math.floor(Math.random()*2);
     target.style.transform= (flip)? 'scale(-1,1)' : 'scale(1,1)';

@@ -9,7 +9,9 @@ body{
     display: grid;
     color: #0F0925;
     font-family: 'Lexend', sans-serif;
+    
 }
+
 #game{
     width: 70vw;
     height: 70vh;
@@ -41,14 +43,15 @@ main{
     justify-content: center;
 }
 h1{
-   padding: 25px;
+   padding: 20px;
+   font-size: 40px;
    text-align: center;
 }
 h3{
     font-weight:bold;
 }
 #rodape{
-    background: #0F0925;
+    background: #0e0a1dce;
     width: 100%;
     color: aliceblue;
     display: flex;
@@ -59,8 +62,16 @@ h3{
     align-items:end;
 }
 #text_reservado{
-    color: #63598a;
+    color: rgb(146, 146, 147);
     text-align: justify;
+}
+#target{
+    user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -o-user-select: none;
+
 }
 #rodape > p{
     font-weight: 200;
