@@ -4,17 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tiro ao Alvo</title>
-    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/game.css">
     
 </head>
 <body>
-    <h1>Encontre o Raposo</h1>
-    <main>
-      <div id="game" class="game-container">
-          <img id="target" src="imgs/raposo.png" alt="Minha Imagem" width="162" height="121" class="movable-image">
-      </div>
-    </main>
-      <div id="pontuacao">    
+<div id="pontuacao">    
         <div id="acerto">
           <h3>Acertos</h3>
           <span id="acertou">0</span>
@@ -27,8 +21,16 @@
             <h3>Total</h3>
             <span id="todo">0</span>
         </div>
+        <div id="div-timer">
+          <p id="label-time">tempo restante</p>
+        <div id="timer"></div>
+        </div>
     </div>
-  </main>
+    <main>
+      <div id="game" class="game-container">
+          <img id="target" src="imgs/raposo.png" alt="Minha Imagem" width="162" height="121" class="movable-image">
+      </div>
+    </main>
   <footer id="rodape">
     <div>
       <h4>Atividade</h4>

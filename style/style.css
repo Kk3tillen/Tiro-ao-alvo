@@ -1,56 +1,59 @@
-@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100;200;300;400;600&display=swap');
-* {
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;600;800;900&family=Lexend:wght@100;200;300;400;600&display=swap');
+*{
     margin: 0;
     padding: 0;
     border: 0;
     box-sizing: border-box;
 }
-body{
-    display: grid;
-    color: #0F0925;
-    font-family: 'Lexend', sans-serif;
-    
+
+body {
+    background: 
+    linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+    url(../imgs/fundo1.png);
+    font-family: 'Inter', sans-serif;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
 
-#game{
-    width: 70vw;
-    height: 70vh;
-    background-image: url("../imgs/fundo1.png");
-    background-size: cover;
-    background-position: center;
-    border-radius: 0.625rem;
-    position: relative;
-    overflow: hidden;
-}
-main{
-    display: grid;
-    place-content: center;
-}
-#pontuacao{
+main {
+    height: 100vh;
     display: flex;
-    gap: 25px;
+    align-items: center;
     justify-content: center;
+    flex-direction: column;
+    gap: 6rem;
+    color: white;
+}
+
+form {
     text-align: center;
-    padding: 25px;
-}
-#acerto, #erros, #total{
-    padding: 20px;
-    width: 11rem;
-    border-radius: 0.625rem;
-    border: 1px solid #C2C2C2;
-    background: #F6F6F6; 
-    display: grid;
+    display: flex;
+    align-items: center;
     justify-content: center;
+    flex-direction: column;
+    gap: 2rem;
 }
-h1{
-   padding: 20px;
-   text-align: center;
+
+form > div {
+    display: grid;
+    gap: 1rem;
+    background-color: #64765ed1;
+    padding: 35px;
+    border-radius: 10px;
+    width: 26rem;
+    
 }
-h3{
-    font-weight:bold;
+#name{
+    padding: 15px;
+    border-radius: 15px;
+    background-color: #9DAD96;
 }
-#rodape{
-    background: #0e0a1dce;
+label{
+    font-size: 20px;
+}
+footer {
+    background: #0e2610;
     width: 100%;
     color: aliceblue;
     display: flex;
@@ -60,90 +63,13 @@ h3{
     padding: 2.5rem;
     align-items:end;
 }
-#text_reservado{
-    color: rgb(146, 146, 147);
-    text-align: justify;
-}
-#target{
-    user-select: none;
-    -moz-user-select: none;
-    -khtml-user-select: none;
-    -webkit-user-select: none;
-    -o-user-select: none;
-
-}
-#rodape > p{
-    font-weight: 200;
-}
-#rodape > h4{
-    font-weight: bolder;
-}
-.movable-image {
-    position: absolute;
-}
-@media screen and (max-width:700px){
-    #target{
-        width: 132px;
-        height: 91px;
-    }
-    #rodape {
-        width: 100wh;
-    }
-    div > p{
-        font-size: 7px;
-    }
-    div > h4{
-        font-size: 7px;
-    }
-    #text_reservado{
-        font-size: 7px;
-    }
-    #pontuacao{
-        display: flex;
-        gap: 10px;
-        justify-content: center;
-        text-align: center;
-        padding: 25px;
-    }
-    #acerto, #erros, #total{
-        padding: 20px;
-        width: 5rem;
-        justify-content: center;
-        font-size: 10px;
-    }
-}
-@media screen and (max-width:450px){
-    
-    h1{
-        font-size: 25px;
-    }
-    #rodape {
-        width: 100wh;
-    }
-    div > p{
-        font-size: 5px;
-    }
-    div > h4{
-        font-size: 5px;
-    }
-    #text_reservado{
-        font-size: 5px;
-    }
-    #pontuacao{
-        display: flex;
-        gap: 5px;
-        justify-content: center;
-        text-align: center;
-        padding: 15px;
-    }
-    #acerto, #erros, #total{
-        padding: 10px;
-        width: 5rem;
-        justify-content: center;
-        font-size: 10px;
-    }
-
-}
-.game-container:hover {
-    cursor: url(../imgs/crosshair.svg),auto;
+#botao{
+    border-radius: 0.625rem;
+    border: 1px solid #10921D;
+    background: #FFF; 
+    width: 14rem;
+    height: 2.5rem;
+    flex-shrink: 0; 
+    color: #1D5F24; 
+    font-weight: 700; 
 }
