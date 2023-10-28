@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100;200;300;400;600&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+.game-container{
+    background: 
+    linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+    url(../imgs/fundo1.png);
+    font-family: 'Inter', sans-serif;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 90vh;
+}
+#target{
+    width: 132px;
+    height: 91px;
+    position: absolute;
+}
+
+label{
+    font-size: 20px;
+}
+
+footer {
+    background: #0e2610;
+    width: 100%;
+    color: aliceblue;
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    text-align: center;
+    padding: 2.5rem;
+    align-items:end;
+}
+
+#pontuacao{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    background-color: #022104df;
+    color: #FFF;
+    gap: 3rem;
+}
+#acerto, #erros, #total, #div-timer{
+    padding: 20px;
+    justify-content: center;
+    font-size: 15px;
+}
+#div-timer{
+    background-color: black;
+}
+@media screen and (max-width:700px){
+    #target{
+        width: 122px;
+        height: 81px;
+    }
+    #rodape {
+        width: 100wh;
+    }
+    div > p{
+        font-size: 7px;
+    }
+    div > h4{
+        font-size: 7px;
+    }
+    #text_reservado{
+        font-size: 7px;
+    }
+    #pontuacao{
+        display: flex;
+        gap: 10px;
+        justify-content: center;
+        text-align: center;
+    }
+    #acerto, #erros, #total{
+        padding: 20px;
+        width: 5rem;
+        justify-content: center;
+        font-size: 10px;
+    }
+}
+@media screen and (max-width:450px){
+    
+    h1{
+        font-size: 25px;
+    }
+    #rodape {
+        width: 100wh;
+    }
+    div > p{
+        font-size: 5px;
+    }
+    div > h4{
+        font-size: 5px;
+    }
+    #text_reservado{
+        font-size: 5px;
+    }
+    #pontuacao{
+        display: flex;
+        gap: 5px;
+        justify-content: center;
+        text-align: center;
+
+    }
+    #acerto, #erros, #total{
+        padding: 10px;
+        width: 5rem;
+        justify-content: center;
+        font-size: 10px;
+    }
+
+}
+.game-container:hover {
+    cursor: url(../imgs/crosshair.svg),auto;
+}

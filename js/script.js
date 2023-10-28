@@ -1,9 +1,9 @@
 
-let gameDiv = document.getElementById("game");
-let raposoImg = document.querySelector("#game .movable-image");
-
 const MOVER_COMPONENTE_AUTOMATICO_APOS_SECS = 3000;
+let gameContainer = document.querySelector(".game-container");
+let raposoImg = document.querySelector("#game .movable-image");
 let target = document.getElementById("target");
+
 let acertou = document.getElementById("acertou");
 let errou = document.getElementById("errou");
 let todo = document.getElementById("todo");
@@ -13,6 +13,30 @@ let valor2 = 0;
 
 let moverComponenteAutomatico;
 
+function startTime(duration, display){
+    var timer = duration, minutes, secunds;
+
+    setInterval(function(){
+        minutes = parseInt(timer / 60, 10);
+        secunds = parseInt(timer % 60, 10);
+
+        minutes = minutes < 10 ? "0" + minutes : minutes;
+        secunds = secunds < 10 ? "0" + secunds : secunds;
+
+        display.textContent = minutes + ":" + secunds;
+
+        if(--timer < 0){
+            timer = duration;
+        }
+    }, 1000);
+}
+
+window.onload = function() {
+    var duration = 7.2 * 4;
+    var display = document.querySelector("#timer");
+
+    startTime(duration, display);
+}
 
 raposoImg.addEventListener("click", function() {
   // Gera coordenadas aleatórias dentro dos limites da div "game"
@@ -42,15 +66,15 @@ target.addEventListener("click", (e) => {
 });
 
 function moverComponente() {
-    const offset = 50;
-    let containerWidth = container.clientWidth;
-    let containerHeight = container.clientHeight;
-    let novoLeft = Math.floor(Math.random()*(containerWidth-target.clientWidth));
-    let novoTop = Math.floor(Math.random()*(containerHeight-target.clientHeight));
+    let limiteEsquerdo = 0;
+    let limiteSuperior = 0;
+    let limiteDireito = gameContainer.clientWidth - raposoImg.clientWidth;
+    let limiteInferior = gameContainer.clientHeight - raposoImg.clientHeight;
+    let novoLeft = Math.floor(Math.random() * (limiteDireito - limiteEsquerdo)) + limiteEsquerdo;
+    let novoTop = Math.floor(Math.random() * (limiteInferior - limiteSuperior)) + limiteSuperior;
     
-    const flip = Math.floor(Math.random()*2);
-    target.style.transform= (flip)? 'scale(-1,1)' : 'scale(1,1)';
-
+    const flip = Math.floor(Math.random() * 2);
+    target.style.transform = flip ? 'scale(-1,1)' : 'scale(1,1)';
     target.style.left = novoLeft + "px";
     target.style.top = novoTop + "px";
 }
