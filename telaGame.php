@@ -1,41 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tiro ao Alvo</title>
-    <link rel="stylesheet" href="style/game.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tiro ao Alvo</title>
+  <link rel="stylesheet" href="style/game.css">
 </head>
 
 <body>
-<audio
-  src="sounds/theme-dora.wav"
-  autoplay>
-</audio>
-<div id="pontuacao">    
-        <div id="acerto">
-          <h3>Acertos</h3>
-          <span id="acertou">0</span>
-        </div>
-        <div id="erros">
-          <h3>Erros</h3>
-          <span id="errou">0</span>
-        </div>
-        <div id="total">
-            <h3>Total</h3>
-            <span id="todo">0</span>
-        </div>
-        <div id="div-timer">
-          <p id="label-time">tempo restante</p>
-          <div id="timer"></div>
-        </div>
-        <button>pause</button>
+  <audio src="sounds/theme-dora.wav" autoplay>
+  </audio>
+  <div id="pontuacao">
+    <div id="acerto">
+      <h3>Acertos</h3>
+      <span id="acertou">0</span>
     </div>
-    <main>
-      <div id="game" class="game-container">
-          <img id="target" src="imgs/raposo.png" alt="Minha Imagem" width="162" height="121" class="movable-image">
-      </div>
-    </main>
+    <div id="erros">
+      <h3>Erros</h3>
+      <span id="errou">0</span>
+    </div>
+    <div id="total">
+      <h3>Total</h3>
+      <span id="todo">0</span>
+    </div>
+    <div id="div-timer">
+      <p id="label-time">tempo restante</p>
+      <div id="timer"></div>
+    </div>
+    <button>pause</button>
+  </div>
+  <main>
+    <div id="game" class="game-container">
+      <img id="target" src="imgs/raposo.png" alt="Minha Imagem" width="162" height="121" class="movable-image">
+    </div>
+    <div class="container">
+      <form action="dados.php" method="get" onsubmit="displayPopup(document.getElementById('nomeJogador').value)">
+        <h2>Fim de jogo</h2>
+        <input type="hidden" name="nome" id="nomeJogador" value="<?= $_GET["name"] ?>">
+        <p>Jogador: <span id="pop-up-name"><?= $_GET["name"] ?></span></p>
+
+        <p>pontuação total</p>
+        <input type="hidden" name="pontTotal" value="0">
+        <span id="todo">0</span>
+
+        <p>Acertos</p>
+        <span id="acertou">0</span>
+        <input type="hidden" name="pontAcertos" value="0">
+
+        <p>Erros</p>
+        <span id="errou">0</span>
+        <input type="hidden" name="pontErros" value="0">
+
+        <input type="submit" value="Ver Ranking">
+      </form>
+    </div>
+  </main>
   <footer id="rodape">
     <div>
       <h4>Atividade</h4>
@@ -51,6 +71,7 @@
       <p>Alex Gomes da Silva</p>
     </div>
   </footer>
-    <script src="js/script.js"></script>
+  <script src="js/script.js"></script>
 </body>
+
 </html>

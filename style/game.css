@@ -15,7 +15,10 @@
     background-position: center;
     background-size: cover;
     height: 90vh;
+    position: relative;
+    
 }
+
 #target{
     width: 132px;
     height: 91px;
@@ -54,6 +57,30 @@ footer {
 #div-timer{
     background-color: black;
 }
+
+
+.container{
+    position: absolute;
+    width: 25%;
+    height: 400px;
+    background-color: #0e2610;
+    color: #FFF;
+    border-radius: 25px;
+    text-align: center;
+    top: 20%;
+    left: 35%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.content{
+    display: grid;
+    gap: 20px;
+    padding: 25px;
+}
+
 @media screen and (max-width:700px){
     #target{
         width: 122px;
