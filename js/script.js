@@ -10,33 +10,54 @@ let todo = document.getElementById("todo");
 
 let valor1 = 0;
 let valor2 = 0; 
+const popUp = document.querySelector(".container");
+popUp.style.display = "none";
 
 let moverComponenteAutomatico;
 
-function startTime(duration, display){
-    var timer = duration, minutes, secunds;
-
-    setInterval(function(){
-        minutes = parseInt(timer / 60, 10);
-        secunds = parseInt(timer % 60, 10);
-
+function startTime(duration, display) {
+    var timeLeft = duration;
+  
+    timer = setInterval(function () {
+      if (timeLeft < 0) {
+        clearInterval(timer);
+        displayPopup();
+      } else {
+        minutes = parseInt(timeLeft / 60, 10);
+        seconds = parseInt(timeLeft % 60, 10);
+  
         minutes = minutes < 10 ? "0" + minutes : minutes;
-        secunds = secunds < 10 ? "0" + secunds : secunds;
-
-        display.textContent = minutes + ":" + secunds;
-
-        if(--timer < 0){
-            timer = duration;
-        }
+        seconds = seconds < 10 ? "0" + seconds : seconds;
+  
+        display.textContent = minutes + ":" + seconds;
+        timeLeft--;
+      }
     }, 1000);
+  }
+  
+  function displayPopup() {
+    const popUp = document.querySelector(".container");
+
+    // Atualize o conteúdo do elemento #pop-up-name
+
+    const popUpPontAcertos = document.getElementById("pontAcertos");
+    if (popUpPontAcertos) {
+        
+    }
+
+    const popUpPontErros = document.getElementById("pontErros");
+    if (popUpPontErros) {
+        
+    }
+
+
+    // Mostre a popup
+    popUp.style.display = "block";
 }
 
-window.onload = function() {
-    var duration = 7.2 * 4;
-    var display = document.querySelector("#timer");
 
-    startTime(duration, display);
-}
+  
+  startTime(5, document.getElementById("timer"));
 
 raposoImg.addEventListener("click", function() {
   // Gera coordenadas aleatórias dentro dos limites da div "game"
@@ -84,3 +105,4 @@ document.getElementById("game").onclick=function(){
    errou.innerHTML = ++valor2; 
    todo.innerHTML = valor1 + valor2;
 }
+

@@ -11,8 +11,8 @@
 <body>
 
   <main>
-  <h1>Raposa Shoot</h1>
-    <form action="telaGame.php" method="post">
+  <h1>Raposa Não pegue</h1>
+    <form action="telaGame.php" method="GET">
       <div>
         <label for="name">Informe seu nome</label>
         <input type="text" name="name" id="name">
