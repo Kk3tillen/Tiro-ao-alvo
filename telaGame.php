@@ -5,9 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tiro ao Alvo</title>
     <link rel="stylesheet" href="style/game.css">
-    
 </head>
+
 <body>
+<audio
+  src="sounds/theme-dora.wav"
+  autoplay>
+</audio>
 <div id="pontuacao">    
         <div id="acerto">
           <h3>Acertos</h3>
@@ -23,8 +27,9 @@
         </div>
         <div id="div-timer">
           <p id="label-time">tempo restante</p>
-        <div id="timer"></div>
+          <div id="timer"></div>
         </div>
+        <button>pause</button>
     </div>
     <main>
       <div id="game" class="game-container">
