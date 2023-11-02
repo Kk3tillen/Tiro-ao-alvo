@@ -74,6 +74,27 @@ footer {
     justify-content: center;
     flex-direction: column;
 }
+div > form{
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    justify-content: center;
+    flex-direction: column;
+}
+#btn-rank{
+    border-radius: 0.625rem;
+    border: 1px solid #10921D;
+    background: #FFF; 
+    width: 14rem;
+    height: 2.5rem;
+    flex-shrink: 0; 
+    color: #1D5F24; 
+    font-weight: 700; 
+}
+h2{
+    padding: 20px;
+}
+
 
 .content{
     display: grid;

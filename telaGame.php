@@ -28,31 +28,36 @@
       <p id="label-time">tempo restante</p>
       <div id="timer"></div>
     </div>
-    <button>pause</button>
   </div>
   <main>
     <div id="game" class="game-container">
       <img id="target" src="imgs/raposo.png" alt="Minha Imagem" width="162" height="121" class="movable-image">
     </div>
     <div class="container">
-      <form action="dados.php" method="get" onsubmit="displayPopup(document.getElementById('nomeJogador').value)">
+      <form action="db/salvar.php" method="GET">
+
         <h2>Fim de jogo</h2>
-        <input type="hidden" name="nome" id="nomeJogador" value="<?= $_GET["name"] ?>">
-        <p>Jogador: <span id="pop-up-name"><?= $_GET["name"] ?></span></p>
-
-        <p>pontuação total</p>
-        <input type="hidden" name="pontTotal" value="0">
-        <span id="todo">0</span>
-
-        <p>Acertos</p>
-        <span id="acertou">0</span>
-        <input type="hidden" name="pontAcertos" value="0">
-
-        <p>Erros</p>
-        <span id="errou">0</span>
-        <input type="hidden" name="pontErros" value="0">
-
-        <input type="submit" value="Ver Ranking">
+        
+        <div>
+          <input type="hidden" name="nome" id="nomeJogador" value="<?= $_GET["name"] ?>">
+          <p>Jogador: <span id="pop-up-name"><?= $_GET["name"] ?></span></p>
+        </div>
+        <div>
+          <p>pontuação total</p>
+          <input type="hidden" id="totalCliq" name="totalCliq" value="">
+          <span id="tot"></span>
+        </div>
+        <div>
+          <p>Acertos</p>
+          <input type="hidden" id="acertos" name="acertos" value="">
+          <span id="acert"></span>
+        </div>
+        <div>
+          <p>Erros</p>
+          <input type="hidden" id="errosFinal" name="errosFinal" value="">
+          <span id="error"></span>
+        </div>
+        <input id="btn-rank" type="submit" value="Ver Ranking">
       </form>
     </div>
   </main>

@@ -9,7 +9,6 @@
 </head>
 
 <body>
-
   <main>
   <h1>Raposa Não pegue</h1>
     <form action="telaGame.php" method="GET">

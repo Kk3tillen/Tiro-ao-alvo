@@ -1,5 +1,5 @@
 
-const MOVER_COMPONENTE_AUTOMATICO_APOS_SECS = 3000;
+const MOVER_COMPONENTE_AUTOMATICO_APOS_SECS = 1000;
 let gameContainer = document.querySelector(".game-container");
 let raposoImg = document.querySelector("#game .movable-image");
 let target = document.getElementById("target");
@@ -37,27 +37,26 @@ function startTime(duration, display) {
   
   function displayPopup() {
     const popUp = document.querySelector(".container");
+    let erros = document.getElementById("errosFinal");
+    let acertos = document.getElementById("acertos");
+    let totalCliqs = document.getElementById("totalCliq");
+    let tot = document.getElementById("tot");
+    let acert = document.getElementById("acert");
+    let error = document.getElementById("error");
+    
+    tot.innerHTML = valor1 + valor2;
+    acert.innerHTML = valor1;
+    error.innerHTML = valor2;
 
-    // Atualize o conteúdo do elemento #pop-up-name
-
-    const popUpPontAcertos = document.getElementById("pontAcertos");
-    if (popUpPontAcertos) {
-        
-    }
-
-    const popUpPontErros = document.getElementById("pontErros");
-    if (popUpPontErros) {
-        
-    }
-
+    acertos.value = valor1;
+    erros.value = valor2;
+    totalCliqs = valor1 + valor2;
 
     // Mostre a popup
     popUp.style.display = "block";
 }
-
-
   
-  startTime(5, document.getElementById("timer"));
+  startTime(15, document.getElementById("timer"));
 
 raposoImg.addEventListener("click", function() {
   // Gera coordenadas aleatórias dentro dos limites da div "game"

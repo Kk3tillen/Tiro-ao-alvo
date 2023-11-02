@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;600;800;900&family=Lexend:wght@100;200;300;400;600&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: 
+    linear-gradient(rgba(0, 0, 0, 0.659), rgba(0, 0, 0, 0.744)),
+    url(../imgs/fundo1.png);
+    font-family: 'Inter', sans-serif;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.container-ranking {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 3rem;
+    color: white;
+}
+
+.table {
+    background-color: #0e2610;
+    width: 70vw;
+    padding: 20px;
+    border-radius: 2rem;
+    text-align: center;
+
+}
+table, th, td {
+    border: 1px solid #062b09;
+    border-collapse: collapse;
+    border-radius: 2rem;
+    padding: 20px;
+
+}
+a{
+    background-color: aliceblue;
+    padding: 20px;
+    border-radius: 1rem;
+    text-decoration: none;
+    color: #062b09;
+    font-weight: bold;
+}
+
+label{
+    font-size: 20px;
+}
+footer {
+    background: #0e2610;
+    width: 100%;
+    color: aliceblue;
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    text-align: center;
+    padding: 2.5rem;
+    align-items:end;
+}
