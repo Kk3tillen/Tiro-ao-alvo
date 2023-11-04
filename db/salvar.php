@@ -10,17 +10,25 @@ $nome = $_GET["nome"];
 $total = $_GET["totalCliq"];
 $acertos = $_GET["acertos"];
 $erros = $_GET["errosFinal"];
+date_default_timezone_set('America/Sao_Paulo');
+
+$data = date('d/m/Y');
+$hora = date('H:i');
+
 
 $p = $conn->prepare(
+    
     "INSERT INTO partida
-    (nome, qnt_acertos, qnt_erros, total)
-    VALUES(:nome, :qnt_acertos , :qnt_erros, :total);"
+    (nome, qnt_acertos, qnt_erros, total, data, hora)
+    VALUES(:nome, :qnt_acertos ,:qnt_erros, :total, :data, :hora);"
 );
 
 $p->bindParam(":nome", $nome);
 $p->bindParam(":qnt_acertos", $acertos);
 $p->bindParam(":qnt_erros", $erros);
 $p->bindParam(":total", $total);
+$p->bindParam(":data", $data);
+$p->bindParam(":hora", $hora);
 
 $p->execute();
 
